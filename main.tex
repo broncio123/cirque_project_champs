@@ -1,4 +1,11 @@
-\documentclass{article}
+% \documentclass{article}
+
+\documentclass[10pt,aps,onecolumn,superscriptaddress]{revtex4-2}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
 \usepackage{amsfonts, amsbsy, amssymb, amsmath, graphicx, float}
 \usepackage{hyperref}
 \hypersetup{
@@ -7,19 +14,51 @@
     filecolor=magenta,      
     urlcolor=cyan,
 }
-\usepackage{subfigure}
-\usepackage[numbers,sort&compress]{natbib}
+% \usepackage{subfigure}
+% \usepackage[numbers,sort&compress]{natbib}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\bibliographystyle{apsrev4-2}
 
-
-\title{cirque project champs}
-\author{BAS, VGG, FGM}
-\date{May 2020}
 
 \begin{document}
 
+\title{The Cirque Potential Problem - CHAMPS}
+
+
+\author{Broncio Aguilar Sanjuan}
+\email{broncio.aguilarsanjuan@bristol.ac.uk}
+\affiliation{School of Mathematics, University of Bristol, \\ Fry Building, Woodland Road, Bristol, BS8 1UG, United Kingdom.}
+
+\author{V\'ictor J. Garc\'ia-Garrido}
+\email{vjose.garcia@uah.es}
+\affiliation{Departamento de F\'isica y Matem\'aticas, Universidad de Alcal\'a, \\ Alcal\'a de Henares, 28871, Spain.}
+
+\author{Francisco Gonz\'alez Montoya}
+\email{fg16704@bristol.ac.uk}
+\affiliation{School of Mathematics, University of Bristol, \\ Fry Building, Woodland Road, Bristol, BS8 1UG, United Kingdom.}
+
+\author{Stephen Wiggins}
+\email{s.wiggins@bristol.ac.uk}
+\affiliation{School of Mathematics, University of Bristol, \\ Fry Building, Woodland Road, Bristol, BS8 1UG, United Kingdom.}
+
+
+
+
+
+\date{May 2020}
+
+
+
+\begin{abstract}
+
+In this paper we explore  
+
+\end{abstract}
+
 \maketitle
+
+\noindent\textbf{Keywords:} Phase space structure, Chemical reaction dynamics, Roaming, Lagrangian descriptors, 
 
 \section{Introduction}
 
@@ -31,21 +70,45 @@ Single VdW potential \cite{Soley2018}. It models the long-range interaction desc
     \label{eq:vdw_single}
 \end{equation}
 
-$C_6$ is the van der Waals dispersion coefficient, and $\alpha$ and $\beta$ are parametrisation constants.
+Potential is parametrised to remove singularity from origin, $r = 0$. We have that $C_6$ is the van der Waals dispersion coefficient, and $\alpha$ and $\beta$  - the characteristic length parameter- are parametrisation constants.
 
-The potential's minimum is located at position $r = 0$, with energy 
+The potential's minimum is located at position $r = r_e = 0$, with energy 
 
 \begin{equation*}
-    V\left( r = 0\right) = - \frac{C_6}{\alpha^3}
+    V\left( r_e \right) = - \frac{C_6}{\alpha^3}
+\end{equation*}
+
+Note that when $r \longrightarrow +\infty $, the leading order form of the potential is
+
+\begin{equation*}
+    V(r \longrightarrow +\infty) ~ - \frac{C_6}{r^6 \beta^3}
 \end{equation*}
 
 If the potential is defined in a 2D plane in terms of the polar coordinates $(r, \theta)$, that is, $V = V(r, \theta)$ then, the potential well is symmetric around $r = 0$ for any $ -\pi \leq \theta \leq \pi$
 
 \section{Double VdW Potential}
 
-To construct a double-well potential using the formula \eqref{eq:vdw_single}, we need to vary the separation between the minima of two overlapped potentials
+To construct a double-well potential using the formula \eqref{eq:vdw_single}, in a similar way to the double Morse potential \cite{GonzalezMontoya2020}, we need first, to express the potential in 2D cartesian coordinates and then, vary the separation between the minima of two overlapped potentials along the x-axis
+
+\textbf{First Proposal} using potential \eqref{eq:vdw_single}
+
+Displace potentials radially by a common distance $x_e$ form the origin in the $x$-axis direction
 
 
+
+
+\begin{equation}
+    V(x, y) = -C_6 \left[ \dfrac{1}{\left(\beta\left[\left(x - x_e\right)^2 + y^2\right] + \alpha\right)^3} + \dfrac{1}{\left(\beta\left[\left(x + x_e\right)^2 + y^2\right] + \alpha\right)^3} \right]
+\end{equation}
+
+To plot the potential you can try the values $C_6 = 1/2$, $\alpha = 1$, $\beta = 1/8$ and $x_e = 1$. We have to understand what is the effect on the topography of the PES by changing any of the parameters that appear in the definition of $V(x,y)$
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.3]{untitled.png}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
 
 
 \newpage
