@@ -1,5 +1,17 @@
 \documentclass{article}
-\usepackage[utf8]{inputenc}
+\usepackage{amsfonts, amsbsy, amssymb, amsmath, graphicx, float}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\usepackage{subfigure}
+\usepackage[numbers,sort&compress]{natbib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 \title{cirque project champs}
 \author{BAS, VGG, FGM}
@@ -12,14 +24,32 @@
 \section{Introduction}
 
 
-Single VdW potential. It describes the long-range dipole-dipole attraction between neutral molecules/atoms
+Single VdW potential \cite{Soley2018}. It models the long-range interaction describing dipole-dipole attraction between neutral molecules/atoms
 
 \begin{equation}
     V(r) = \frac{- C_6}{(\beta r^2 + \alpha)^3}
+    \label{eq:vdw_single}
 \end{equation}
 
 $C_6$ is the van der Waals dispersion coefficient, and $\alpha$ and $\beta$ are parametrisation constants.
 
+The potential's minimum is located at position $r = 0$, with energy 
 
+\begin{equation*}
+    V\left( r = 0\right) = - \frac{C_6}{\alpha^3}
+\end{equation*}
+
+If the potential is defined in a 2D plane in terms of the polar coordinates $(r, \theta)$, that is, $V = V(r, \theta)$ then, the potential well is symmetric around $r = 0$ for any $ -\pi \leq \theta \leq \pi$
+
+\section{Double VdW Potential}
+
+To construct a double-well potential using the formula \eqref{eq:vdw_single}, we need to vary the separation between the minima of two overlapped potentials
+
+
+
+
+\newpage
+\bibliographystyle{siam}
+\bibliography{cirque}
 
 \end{document}
