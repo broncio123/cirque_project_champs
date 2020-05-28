@@ -86,28 +86,28 @@ Note that when $r \longrightarrow +\infty $, the leading order form of the poten
 
 If the potential is defined in a 2D plane in terms of the polar coordinates $(r, \theta)$, that is, $V = V(r, \theta)$ then, the potential well is symmetric around $r = 0$ for any $ -\pi \leq \theta \leq \pi$
 
-\section{Double VdW Potential}
+\section{Double van der Waals Potential}
 
 To construct a double-well potential using the formula \eqref{eq:vdw-single}, in a similar way to the double Morse potential \cite{GonzalezMontoya2020}, we need first, to express the potential in 2D cartesian coordinates and then, vary the separation between the minima of two overlapped potentials along the x-axis
 
 \textbf{First Proposal} using potential \eqref{eq:vdw-single}
 
-Displace potentials radially by a common distance $x_e$ form the origin in the $x$-axis direction
+Displace potentials radially by a common distance $d$ from the origin in the $x$-axis direction
 
 
 
 
 \begin{equation}
-    V(x, y) = -C_6 \left[ \dfrac{1}{\left(\beta\left[\left(x - x_e\right)^2 + y^2\right] + \alpha\right)^3} + \dfrac{1}{\left(\beta\left[\left(x + x_e\right)^2 + y^2\right] + \alpha\right)^3} \right]
+    V(x, y) = -C_6 \left[ \dfrac{1}{\left(\beta\left[\left(x - d\right)^2 + y^2\right] + \alpha\right)^3} + \dfrac{1}{\left(\beta\left[\left(x + d\right)^2 + y^2\right] + \alpha\right)^3} \right]
     \label{eq:vdw-double}
 \end{equation}
 
-To plot the potential you can try the values $C_6 = 1/2$, $\alpha = 1$, $\beta = 1/8$ and $x_e = 1$. We have to understand what is the effect on the topography of the PES by changing any of the parameters that appear in the definition of $V(x,y)$
+To plot the potential you can try the values $C_6 = 1/2$, $\alpha = 1$, $\beta = 1/8$ and $d = 1$. We have to understand what is the effect on the topography of the PES by changing any of the parameters that appear in the definition of $V(x,y)$
 
 \begin{figure}
     \centering
     \includegraphics[scale=0.3]{untitled.png}
-    \caption{Surface plot of Double-vdW potential Equation \eqref{eq:vdw-single}. Parameters used: $C_6 = 1/2$, $\alpha = 1$, $\beta = 1/8$}
+    \caption{Surface plot of Double-vdW potential Equation \eqref{eq:vdw-single}. Parameters used: $C_6 = 1/2$, $\alpha = 1$, $\beta = 1/8$ and $d = 1$}
     \label{fig:vdw-single_surface}
 \end{figure}
 
@@ -115,9 +115,42 @@ To plot the potential you can try the values $C_6 = 1/2$, $\alpha = 1$, $\beta =
 \begin{figure}
     \centering
     \includegraphics[scale=0.5]{notebooks/figures/double-vdw_surface.png}
-    \caption{Surface plot of Double-vdW potential Equation \eqref{eq:vdw-double}. Parameters used: $C_6 = 1/2$, $\alpha = 1$, $\beta = 1/8$, and  $x_e = 5$ }
+    \caption{Surface plot of Double-vdW potential Equation \eqref{eq:vdw-double}. Parameters used: $C_6 = 1/2$, $\alpha = 1$, $\beta = 1/8$, and  $d = 5$ }
     \label{fig:vdw-double_surface}
 \end{figure}
+
+
+The two degrees-of-freedom Hamiltonian for the Cirque potential energy surface is defined as the classical sum of kinetic plus potential energy:
+\begin{equation}
+H(x,y,p_x,p_y) = \dfrac{p_x^2}{2 m_1} + \dfrac{p_y^2}{2 m_2} + V(x,y)
+\label{eq:hamil}
+\end{equation}
+Hamilton's equations that determine the systems dynamical evolution are given by:
+\begin{equation}
+\begin{cases}
+\dot{x} = \dfrac{\partial H}{\partial p_x} = \dfrac{p_x}{m_1} \\[.5cm]
+\dot{y} = \dfrac{\partial H}{\partial p_y} = \dfrac{p_y}{m_2} \\
+\dot{p}_x = - \dfrac{\partial H}{\partial x} = - \dfrac{\partial V}{\partial x} = - 6 \, \beta \, C_6 \left[\dfrac{x - d}{\left(\beta\left[\left(x - d\right)^2 + y^2\right] + \alpha\right)^4} + \dfrac{x + d}{\left(\beta\left[\left(x + d\right)^2 + y^2\right] + \alpha\right)^4}\right] \\[.7cm]
+\dot{p}_y = - \dfrac{\partial H}{\partial y} = - \dfrac{\partial V}{\partial y} = - 6 \, \beta \, C_6 \, y \left[\dfrac{1}{\left(\beta\left[\left(x - d\right)^2 + y^2\right] + \alpha\right)^4} + \dfrac{1}{\left(\beta\left[\left(x + d\right)^2 + y^2\right] + \alpha\right)^4}\right]
+\end{cases}
+\label{eq:ham_eq}
+\end{equation}
+The equilibrium points $\mathbf{r}_e = (x_e,y_e,p_{x,e},p_{y,e})$ of the dynamical system given above are contained in configuration space, since $p_{x,e} = p_{y,e} = 0$, and they are also critical points of the PES, that is $\nabla V (x_e,y_e) = \mathbf{0}$. It is straightforward to check that these conditions give the points:
+\begin{equation}
+\mathbf{r}_e^{1} = (0,0,0,0) \quad,\quad \mathbf{r}_e^{2} = (-d,0,0,0) \quad,\quad \mathbf{r}_e^{3} = (d,0,0,0)
+\label{eq:eq_pts}
+\end{equation}
+The linear stability of these equilibrium points is determined by the eigenvalues of the Jacobian matrix given by the linearization of Eq. \eqref{eq:ham_eq} about each of the points. In order to construct the Jacobian, we need to compute the second order partial derivatives that characterize the Hessian matrix of the PES:
+\begin{equation}
+\begin{cases}
+\dfrac{\partial^{\,	2} V}{\partial x^2} = 6 \, \beta \, C_6 \left[\dfrac{\beta\left[-7\left(x - d\right)^2 + y^2\right] + \alpha}{\left(\beta\left[\left(x - d\right)^2 + y^2\right] + \alpha\right)^5} + \dfrac{\beta\left[-7\left(x + d\right)^2 + y^2\right] + \alpha}{\left(\beta\left[\left(x + d\right)^2 + y^2\right] + \alpha\right)^5} \right] \\[.8cm]
+
+\dfrac{\partial^{\,	2} V}{\partial y^2} = 6 \, \beta \, C_6 \left[\dfrac{\beta\left[\left(x - d\right)^2 - 7 y^2\right] + \alpha}{\left(\beta\left[\left(x - d\right)^2 + y^2\right] + \alpha\right)^5} + \dfrac{\beta\left[\left(x + d\right)^2 - 7y^2\right] + \alpha}{\left(\beta\left[\left(x + d\right)^2 + y^2\right] + \alpha\right)^5} \right] \\[.8cm]
+
+\dfrac{\partial^{\,	2} V}{\partial x \partial y} = - 48 \, \beta^2 \, C_6 \, y \left[\dfrac{x - d}{\left(\beta\left[\left(x - d\right)^2 + y^2\right] + \alpha\right)^5} + \dfrac{x + d}{\left(\beta\left[\left(x + d\right)^2 + y^2\right] + \alpha\right)^5}\right]
+\end{cases}
+\label{eq:second_pder}
+\end{equation}
 
 \newpage
 \bibliographystyle{siam}
