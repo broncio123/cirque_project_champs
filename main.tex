@@ -20,26 +20,23 @@
 
 \begin{document}
 
-\title{Chemical Reaction Dynamics on the Cirque Potential Energy Surface}
+\title{Chemical Reaction Dynamics \\ on the Cirque Potential Energy Surface}
 
-\author{Broncio Aguilar Sanjuan}
-\email{broncio.aguilarsanjuan@bristol.ac.uk}
-\affiliation{School of Mathematics, University of Bristol, \\ Fry Building, Woodland Road, Bristol, BS8 1UG, United Kingdom.}
-
-\author{V\'ictor J. Garc\'ia-Garrido}
-\email{vjose.garcia@uah.es}
-\affiliation{Departamento de F\'isica y Matem\'aticas, Universidad de Alcal\'a, \\ Alcal\'a de Henares, 28871, Spain.}
-
-\author{Francisco Gonz\'alez Montoya}
-\email{fg16704@bristol.ac.uk}
-\affiliation{School of Mathematics, University of Bristol, \\ Fry Building, Woodland Road, Bristol, BS8 1UG, United Kingdom.}
-
-\author{Stephen Wiggins}
-\email{s.wiggins@bristol.ac.uk}
-\affiliation{School of Mathematics, University of Bristol, \\ Fry Building, Woodland Road, Bristol, BS8 1UG, United Kingdom.}
-
-
-\date{\today}
+%\author{Broncio Aguilar Sanjuan}
+%\email{broncio.aguilarsanjuan@bristol.ac.uk}
+%\affiliation{School of Mathematics, University of Bristol, \\ Fry Building, Woodland Road, Bristol, BS8 1UG, United Kingdom.}
+%
+%\author{Francisco Gonz\'alez Montoya}
+%\email{fg16704@bristol.ac.uk}
+%\affiliation{School of Mathematics, University of Bristol, \\ Fry Building, Woodland Road, Bristol, BS8 1UG, United Kingdom.}
+%
+%\author{V\'ictor J. Garc\'ia-Garrido}
+%\email{vjose.garcia@uah.es}
+%\affiliation{Departamento de F\'isica y Matem\'aticas, Universidad de Alcal\'a, \\ Alcal\'a de Henares, 28871, Spain.}
+%
+%\author{Stephen Wiggins}
+%\email{s.wiggins@bristol.ac.uk}
+%\affiliation{School of Mathematics, University of Bristol, \\ Fry Building, Woodland Road, Bristol, BS8 1UG, United Kingdom.}
 
 
 \begin{abstract}
@@ -58,104 +55,96 @@ In this paper we explore the bifurcation scenario when the energy is increased.
 
 \section{Introduction}
 
+\section{The Cirque Potential Energy Surface Model}
 
-Single VdW potential \cite{Soley2018}. It models the long-range interaction describing dipole-dipole attraction between neutral molecules/atoms
+In this section we introduce the Cirque potential energy surface (PES) that we will analyze in this work. This model is constructed from the superposition of two van der Waals potentials that are centered at symmetrically located points with respect to the origin. This approach is similar to that followed in \cite{GonzalezMontoya2020} to generate a double-Morse potential. For the single van der Waals potential energy we use the expression introduced in \cite{Soley2018} which models the long-range interaction describing dipole-dipole attraction between neutral molecules/atoms. This potential has the structure: 
 \begin{equation}
-    V(r) = -\dfrac{C}{(\beta r^2 + \alpha)^3}
-    \label{eq:vdw-single}
+W(r) = -\dfrac{C}{(\beta r^2 + \alpha)^3}
+\label{eq:vdw-single}
 \end{equation}
-Potential is parametrized to remove singularity from origin, $r = 0$. We have that $C$ is the van der Waals dispersion coefficient, and $\alpha$ and $\beta$  - the characteristic length parameter - are positive parametrization constants. The potential's minimum is located at position $r = r_e = 0$, with energy 
+where $r$ is the radial coordinate in the plane, $C$ is the van der Waals dispersion coefficient, $\alpha$ is a parameter that removes the singularity from the origin, $r = 0$, and $\beta$ is the characteristic length parameter. They are all positive constants. The potential's minimum is located at the origin, i.e. $r = r_e = 0$, with energy: 
 \begin{equation}
-    V\left(r_e \right) = - \dfrac{C}{\alpha^3}
+W\left(r_e\right) = - \dfrac{C}{\alpha^3}
 \end{equation}
-Note that when $r \longrightarrow + \infty$, the leading order form of the potential is
+Note that the potential has axial-symmetry since it only depends on the radial distance. Moreover, when $r \rightarrow + \infty$ the leading order form of the potential is:
 \begin{equation}
-    V(r \longrightarrow +\infty) \sim - \frac{C}{r^6 \beta^3}
+W(r) \sim - \frac{C}{\beta^3 r^6}
 \end{equation}
-Since the potential only depends on the radial distance from the origin, it is axially symmetric when considered as a function in the 2D plane.
 
-An alternative way that we can use to write the model, so that its parameters have a geometrical interpretation regarding the shape of the potential energy function is the following. Consider the function:
+In this work we have adopted the convention of writing this model potential in an alternative way so that its parameters have a geometrical interpretation regarding the shape of the potential energy function. Consider the function:
 \begin{equation}
-W(\mathbf{r}) = - \dfrac{W_0}{\left(\dfrac{1}{k^2} |\mathbf{r}|^2 + 1\right)^3} = - \dfrac{W_0 k^6}{\left( |\mathbf{r}|^2 + k^2\right)^3}
+W(r) = - \dfrac{W_0 \, k^6}{\left(r^2 + k^2\right)^3}
 \label{eq:heller_pes}
 \end{equation}
-where $\mathbf{r} = (x,y)$ is the position vector. It is straightforward to show that $W_0$ represents the depth of the potential well located at the origin with respect to the dissociation energy, which is given by:
+It is straightforward to show that $W_0$ represents the depth of the potential well located at the origin with respect to the dissociation energy, which is given by:
 \begin{equation}
-W_{\infty} = \lim_{|\mathbf{r}| \to \infty} W(\mathbf{r}) = 0
+W_{\infty} = \lim_{r \to \infty} W(r) = 0
 \end{equation}
-Moreover, the parameter $k$ determines the half-width of the well as measured at the energy level corresponding to one eighth the energy of the minimum at the bottom of the well. We can shift the PES in Eq. \eqref{eq:heller_pes} to any point $\mathbf{r}_0 = (x_0,y_0)$ in configuration space by considering:
+Moreover, the parameter $k$ determines the half-width of the well as measured at the energy level corresponding to one eighth the energy of the minimum at the bottom of the well. The effect of the parameters $k$ and $W_0$ on the geometry of the potential is represented in Fig. \ref{fig:heller_pes}. We can easily shift the PES in Eq. \eqref{eq:heller_pes} to any point $\mathbf{r}_0 = (x_0,y_0)$ in configuration space. To d so, consider the position vector $\mathbf{r} = (x,y)$ and define the function:
 \begin{equation}
-W_{\mathbf{r}_0}(\mathbf{r}) = W(\mathbf{r} - \mathbf{r}_0) = - \dfrac{W_0 k^6}{\left( |\mathbf{r} - \mathbf{r}_0|^2 + k^2\right)^3} = - \dfrac{W_0 k^6}{\left(\left(x-x_0\right)^2 + \left(y-y_0\right)^2 + k^2\right)^3}
+W_{\mathbf{r}_0}(\mathbf{r}) = W(\mathbf{r} - \mathbf{r}_0) = - \dfrac{W_0 \, k^6}{\left( |\mathbf{r} - \mathbf{r}_0|^2 + k^2\right)^3} = - \dfrac{W_0 \, k^6}{\left(\left(x-x_0\right)^2 + \left(y-y_0\right)^2 + k^2\right)^3}
 \end{equation}
-and the double van der Waals PES used to model the Cirque energy landscape can be easily constructed by means of choosing two points on the $x$-axis separated the same distance $d$ from the origin, that is, $\mathbf{r}_{1,2} = (\pm d,0)$, and superposing their potentials so that:
+Therefore, the double van der Waals PES used to model the Cirque energy landscape can be  constructed by means of choosing two points on the $x$-axis separated the same distance $d$ from the origin, that is, $\mathbf{r}_{1,2} = (\pm d,0)$, and superposing their potentials so that:
 \begin{equation}
 V(\mathbf{r}) \equiv V(x,y) =  W_{\mathbf{r}_1}(\mathbf{r}) + W_{\mathbf{r}_2}(\mathbf{r})
-= - W_0 k^6 \left[\dfrac{1}{\left(\left(x - d\right)^2 + y^2 + k^2\right)^3} + \dfrac{1}{\left(\left(x + d\right)^2 + y^2 + k^2\right)^3} \right]
+= - W_0 \, k^6 \left[\dfrac{1}{\left(\left(x - d\right)^2 + y^2 + k^2\right)^3} + \dfrac{1}{\left(\left(x + d\right)^2 + y^2 + k^2\right)^3} \right]
+\label{eq:double_vdw}
 \end{equation}
 
-
 \begin{figure}[htbp]
-\includegraphics[scale=0.35]{heller_potFunc_new2.png}
-\caption{Geometrical interpretation of the parameters that determine the shape of the potential energy function in Eq. \eqref{eq:heller_pes}.}
-\label{fig:heller_pes}
+	\centering
+	\includegraphics[scale=0.28]{heller_potFunc_new2.png}
+	\caption{Geometrical interpretation of the parameters determining the shape of the PES in Eq. \eqref{eq:heller_pes}.}
+	\label{fig:heller_pes}
 \end{figure}
 
 
-
-
-
-\section{Double van der Waals Potential}
-
-To construct a double-well potential using the formula \eqref{eq:vdw-single}, in a similar way to the double Morse potential \cite{GonzalezMontoya2020}, we need first, to express the potential in 2D cartesian coordinates and then, vary the separation between the minima of two overlapped potentials along the x-axis
-
-\textbf{First Proposal} using potential \eqref{eq:vdw-single}
-
-Displace potentials radially by a common distance $d$ from the origin in the $x$-axis direction
-\begin{equation}
-    V(x, y) = -C \left[ \dfrac{1}{\left(\beta\left[\left(x - d\right)^2 + y^2\right] + \alpha\right)^3} + \dfrac{1}{\left(\beta\left[\left(x + d\right)^2 + y^2\right] + \alpha\right)^3} \right]
-    \label{eq:vdw-double}
-\end{equation}
-
-To plot the potential you can try the values $C = 1/2$, $\alpha = 1$, $\beta = 1/8$ and $d = 1$. We have to understand what is the effect on the topography of the PES by changing any of the parameters that appear in the definition of $V(x,y)$
-
 \begin{figure}[htbp]
-    A)\includegraphics[scale=0.26]{CirquePES_c_1div2_a_1_b_1div8_d_1.png}
-    B)\includegraphics[scale=0.32]{double-vdw_surface.png}
-    \caption{Double van der Waals PES in Eq. \eqref{eq:vdw-single} for the model parameters: A) $C = 1/2$, $\alpha = 1$, $\beta = 1/8$ and $d = 1$; B) $C = 1/2$, $\alpha = 1$, $\beta = 1/8$, and $d = 5$.}
-    \label{fig:vdw-single_surface}
+	A)\includegraphics[scale=0.28]{PES_Cirque_w0_1div2_k_1_d_1.png}
+	B)\includegraphics[scale=0.28]{PES_Cirque_w0_1div2_k_3_d_1.png}
+	C)\includegraphics[scale=0.25]{pitcforkBif.png}
+	\caption{Double van der Waals PES in Eq. \eqref{eq:double_vdw} for the model parameters: A) $W_0 = 1/2$, $k = 1$, $d = 1$; B) $W_0 = 1/2$, $k = 3$, $d = 1$; C) Pitchfork bifurcation of the PES along the $x$-axis for $W_0 = 1/2$ and $d = 1$, as the well width parameter $k$ is varied.}
+	\label{fig:double_vdw_PES}
 \end{figure}
 
-The two degrees-of-freedom Hamiltonian for the Cirque potential energy surface is defined as the classical sum of kinetic plus potential energy:
+
+%\begin{figure}[htbp]
+%    A)\includegraphics[scale=0.24]{CirquePES_c_1div2_a_1_b_1div8_d_1.png}
+%    B)\includegraphics[scale=0.33]{double-vdw_surface.png}
+%    \caption{Double van der Waals PES in Eq. \eqref{eq:vdw-single} for the model parameters: A) $C = 1/2$, $\alpha = 1$, $\beta = 1/8$ and $d = 1$; B) $C = 1/2$, $\alpha = 1$, $\beta = 1/8$, and $d = 5$.}
+%    \label{fig:vdw-single_surface}
+%\end{figure}
+
+The two degrees-of-freedom (DoF) Hamiltonian for the Cirque potential energy surface is defined as the classical sum of kinetic plus potential energy:
 \begin{equation}
 H(x,y,p_x,p_y) = \dfrac{p_x^2}{2 m_1} + \dfrac{p_y^2}{2 m_2} + V(x,y)
 \label{eq:hamil}
 \end{equation}
-
-Hamilton's equations that determine the systems dynamical evolution are given by:
+where $m_1$ and $m_2$ are the masses in the $x$ and $y$ DoF respectively. Hamilton's equations that determine the systems dynamical evolution are given by:
 \begin{equation}
-    \begin{cases}
-    \dot{x} = \dfrac{\partial H}{\partial p_x} = \dfrac{p_x}{m_1} \\[.5cm]
-    \dot{y} = \dfrac{\partial H}{\partial p_y} = \dfrac{p_y}{m_2} \\
-    \dot{p}_x = - \dfrac{\partial H}{\partial x} = - \dfrac{\partial V}{\partial x} = - 6 \, \beta \, C \left[\dfrac{x - d}{\left(\beta\left[\left(x - d\right)^2 + y^2\right] + \alpha\right)^4} + \dfrac{x + d}{\left(\beta\left[\left(x + d\right)^2 + y^2\right] + \alpha\right)^4}\right] \\[.7cm]
-    \dot{p}_y = - \dfrac{\partial H}{\partial y} = - \dfrac{\partial V}{\partial y} = - 6 \, \beta \, C \, y \left[\dfrac{1}{\left(\beta\left[\left(x - d\right)^2 + y^2\right] + \alpha\right)^4} + \dfrac{1}{\left(\beta\left[\left(x + d\right)^2 + y^2\right] + \alpha\right)^4}\right]
-    \end{cases}
-    \label{eq:ham_eq}
+\begin{cases}
+\dot{x} = \dfrac{\partial H}{\partial p_x} = \dfrac{p_x}{m_1} \\[.5cm]
+\dot{y} = \dfrac{\partial H}{\partial p_y} = \dfrac{p_y}{m_2} \\
+\dot{p}_x = - \dfrac{\partial H}{\partial x} = - \dfrac{\partial V}{\partial x} = - 6 W_0 \, k^6 \left[\dfrac{x - d}{\left(\left(x - d\right)^2 + y^2 + k^2\right)^4} + \dfrac{x + d}{\left(\left(x + d\right)^2 + y^2 + k^2\right)^4}\right] \\[.8cm]
+\dot{p}_y = - \dfrac{\partial H}{\partial y} = - \dfrac{\partial V}{\partial y} = - 6 W_0 \, k^6 y \left[\dfrac{1}{\left(\left(x - d\right)^2 + y^2 + k^2\right)^4} + \dfrac{1}{\left(\left(x + d\right)^2 + y^2 + k^2\right)^4}\right]
+\end{cases}
+\label{eq:ham_eq}
 \end{equation}
-In this work we will consider the situation where both DoF have unit mass, that is $m_1 = m_2 = 1$. The equilibrium points $\mathbf{r}_e = (x_e,y_e,p_{x,e},p_{y,e})$ of the dynamical system given above are contained in configuration space, since $p_{x,e} = p_{y,e} = 0$, and they are also critical points of the PES, that is $\nabla V (x_e,y_e) = \mathbf{0}$. It is straightforward to check that under these conditions, the points have to satisfy:
+In this work we will consider the situation where both DoF have unit mass, that is $m_1 = m_2 = 1$. The equilibrium points $\mathbf{x}_e = (x_e,y_e,p_{x,e},p_{y,e})$ of the dynamical system given above are contained in configuration space, since $p_{x,e} = p_{y,e} = 0$, and they are also critical points of the PES, that is $\nabla V (x_e,y_e) = \mathbf{0}$. It is straightforward to check that under these conditions, the points have to satisfy:
 \begin{equation}
-y_e = 0 \quad , \quad \left(x_e - d\right) \left[\beta\left(x_e + d\right)^2 + \alpha\right]^4 + \left(x_e + d\right) \left[\beta\left(x_e - d\right)^2 + \alpha\right]^4 = 0 
+y_e = 0 \quad , \quad \left(x_e - d\right) \left[\left(x_e + d\right)^2 + k^2\right]^4 + \left(x_e + d\right) \left[\left(x_e - d\right)^2 + k^2\right]^4 = 0 
 \label{eq:eq_pts}
 \end{equation}
-It is straightforward to show that $x_e = 0$ is always a solution to the equation above, and therefore the origin is always an equilibrium point of Hamilton's equations for this system. Moreover, there is also an equilibrium point located at infinity. Regarding the presence of other equilibria, this depends critically on the model parameters, and if they exist, their coordinates are of the form $\mathbf{r}_e = (x_e(\alpha,\beta,d),0,0,0)$. 
+It is straightforward to show that $x_e = 0$ is always a solution to the equation above, and therefore the origin is always an equilibrium point of Hamilton's equations for this system. Moreover, there is also an equilibrium point located at infinity. Regarding the presence of other equilibria, this depends critically on the model parameters, and if they exist, their coordinates are of the form $\mathbf{x}_e = (x_e(k,d),0,0,0)$. 
 
 The linear stability of these equilibrium points is determined by the eigenvalues of the Jacobian matrix given by the linearization of Eq. \eqref{eq:ham_eq} about each of the points. In order to construct the Jacobian, we need to compute the second order partial derivatives that characterize the Hessian matrix of the PES:
 \begin{equation}
 \begin{cases}
-\dfrac{\partial^{\,	2} V}{\partial x^2} = 6 \, \beta \, C \left[\dfrac{\beta\left[-7\left(x - d\right)^2 + y^2\right] + \alpha}{\left(\beta\left[\left(x - d\right)^2 + y^2\right] + \alpha\right)^5} + \dfrac{\beta\left[-7\left(x + d\right)^2 + y^2\right] + \alpha}{\left(\beta\left[\left(x + d\right)^2 + y^2\right] + \alpha\right)^5} \right] \\[.8cm]
+\dfrac{\partial^{\,	2} V}{\partial x^2} = 6 \, W_0 \, k^6 \left[\dfrac{-7\left(x - d\right)^2 + y^2 + k^2}{\left(\left(x - d\right)^2 + y^2 + k^2\right)^5} + \dfrac{-7\left(x + d\right)^2 + y^2 + k^2}{\left(\left(x + d\right)^2 + y^2 + k^2\right)^5} \right] \\[.8cm]
 
-\dfrac{\partial^{\,	2} V}{\partial y^2} = 6 \, \beta \, C \left[\dfrac{\beta\left[\left(x - d\right)^2 - 7 y^2\right] + \alpha}{\left(\beta\left[\left(x - d\right)^2 + y^2\right] + \alpha\right)^5} + \dfrac{\beta\left[\left(x + d\right)^2 - 7y^2\right] + \alpha}{\left(\beta\left[\left(x + d\right)^2 + y^2\right] + \alpha\right)^5} \right] \\[.8cm]
+\dfrac{\partial^{\,	2} V}{\partial y^2} = 6 \, W_0 \, k^6 \left[\dfrac{\left(x - d\right)^2 - 7 y^2 + k^2}{\left(\left(x - d\right)^2 + y^2 + k^2\right)^5} + \dfrac{\left(x + d\right)^2 - 7y^2 + k^2}{\left(\left(x + d\right)^2 + y^2 + k^2\right)^5} \right] \\[.8cm]
 
-\dfrac{\partial^{\,	2} V}{\partial x \partial y} = - 48 \, \beta^2 \, C \, y \left[\dfrac{x - d}{\left(\beta\left[\left(x - d\right)^2 + y^2\right] + \alpha\right)^5} + \dfrac{x + d}{\left(\beta\left[\left(x + d\right)^2 + y^2\right] + \alpha\right)^5}\right]
+\dfrac{\partial^{\,	2} V}{\partial x \partial y} = - 48 \, W_0 \, k^6 \, y \left[\dfrac{x - d}{\left(\left(x - d\right)^2 + y^2 + k^2\right)^5} + \dfrac{x + d}{\left(\left(x + d\right)^2 + y^2 + k^2\right)^5}\right]
 \end{cases}
 \label{eq:second_pder}
 \end{equation}
@@ -165,39 +154,35 @@ We take a look now at the Hessian matrix of the PES evaluated at the origin:
 \dfrac{\partial^{\,	2} V}{\partial x^2}(0,0) & \dfrac{\partial^{\,	2} V}{\partial x \partial y}(0,0) \\[.4cm]
 \dfrac{\partial^{\,	2} V}{\partial y \partial x}(0,0) & \dfrac{\partial^{\, 2} V}{\partial y^2}(0,0)
 \end{pmatrix} = \begin{pmatrix}
-\dfrac{12 \beta C}{\left(\beta d^2 + \alpha\right)^4} \left[1 - \dfrac{8\beta d^2}{\beta d^2 + \alpha}\right] & 0 \\[.5cm]
-0 & \dfrac{12 \beta C}{\left(\beta d^2 + \alpha\right)^4}
+\dfrac{12 W_0 \, k^6 \left(k^2 - 7 d^2\right)}{\left(d^2 + k^2\right)^5} & 0 \\[.5cm]
+0 & \dfrac{12 W_0 \, k^6}{\left(d^2 + k^2\right)^4}
 \end{pmatrix}
 \end{equation}
 The linear stability of the origin is characterized by the nature of the eigenvalues of the Jacobian matrix:
 \begin{equation}
 J(0,0) = \begin{pmatrix}
-\mathbb{O}_2 & \mathbb{I}_2 \\[.3cm]
--\text{Hess}_{V}(0,0) & \mathbb{O}_2
+\mathbb{O}_2 & \hspace{.2cm} \mathbb{I}_2 \hspace{.1cm} \\[.3cm]
+-\text{Hess}_{V}(0,0) & \hspace{.2cm} \mathbb{O}_2 \hspace{.1cm}
 \end{pmatrix} = \begin{pmatrix}
-0 & 0 & \hspace{.2cm} 1 & \hspace{.5cm} 0 \hspace{.2cm} \\[.4cm]
-0 & 0 & \hspace{.2cm} 0 & \hspace{.5cm} 1 \hspace{.2cm} \\[.4cm]
-\dfrac{12 \beta C}{\left(\beta d^2 + \alpha\right)^4} \left[\dfrac{8\beta d^2}{\beta d^2 + \alpha} - 1\right] & 0 & \hspace{.2cm} 0 & \hspace{.5cm} 0 \hspace{.2cm} \\[.4cm]
-0 & -\dfrac{12 \beta C}{\left(\beta d^2 + \alpha\right)^4} & \hspace{.2cm} 0 & \hspace{.5cm} 0 \hspace{.2cm} 
+0 & 0 & \hspace{.5cm} 1 & \hspace{.5cm} 0 \hspace{.2cm} \\[.4cm]
+0 & 0 & \hspace{.5cm} 0 & \hspace{.5cm} 1 \hspace{.2cm} \\[.4cm]
+\dfrac{12 W_0 \, k^6 \left(7 d^2 - k^2\right)}{\left(d^2 + k^2\right)^5} & 0 & \hspace{.5cm} 0 & \hspace{.5cm} 0 \hspace{.2cm} \\[.4cm]
+0 & -\dfrac{12 W_0 \, k^6}{\left(d^2 + k^2\right)^4} & \hspace{.5cm} 0 & \hspace{.5cm} 0 \hspace{.2cm} 
 \end{pmatrix}
 \end{equation}
 The eigenvalues $\xi$ are given by:
 \begin{equation}
-\xi_{1,2} = \pm \, \omega \, i \quad,\quad \xi_{3,4} = \pm \, \omega \, \sqrt{\dfrac{8\beta d^2}{\beta d^2 + \alpha} - 1}
+\xi_{1,2} = \pm \, \omega \, i \quad,\quad \xi_{3,4} = \pm \, \omega \, \sqrt{\dfrac{7 d^2 - k^2}{ d^2 + k^2}} = \pm \, \omega \, \sqrt{\dfrac{7 -  \eta^2}{1 + \eta^2}}
  \end{equation}
-where we have that:
+where $\eta = k / d$ is the ratio between the half-width of the single van der Waals potential and its displacement from the origin, and the angular frequency of oscillation in the linear approximation is:
 \begin{equation}
-\omega = \dfrac{2 \sqrt{3\beta C}}{\left(\beta d^2 + \alpha\right)^2}
+\omega = 2 \, \sqrt{3 W_0}\dfrac{k^3}{\left(d^2 + k^2\right)^2} = 2 \, \sqrt{\dfrac{3 W_0}{k^2}} \dfrac{\eta^4}{\left(1 + \eta^2\right)^2}
 \end{equation}
+Therefore, the origin is an index-1 saddle equilibrium point when the condition $7 d^2 \geq k^2$ is met, which is equivalent to $0 < \eta < \sqrt{7}$. However, for $\eta > \sqrt{7}$ the index-1 saddle turns into a potential well (a center equilibrium point). This indicates that there is a pitchfork bifurcation taking place in the PES at the origin at the critical relation $\eta = \sqrt{7}$. We illustrate this behavior in Fig. \ref{fig:double_vdw_PES} C) by looking at how the shape of the PES changes along the $x$-axis.
 
-is the angular frequency of oscillation in the linear approximation. Therefore, the origin is an index-1 saddle equilibrium point when the condition $7\beta d^2 \geq \alpha$ is met. However, for $7\beta d^2 < \alpha$ it turns out into a potential well (a center equilibrium point). This indicates that there is a pitchfork bifurcation taking place in the PES at the origin at the critical relation $7\beta d^2 = \alpha$. We illustrate this behavior below by looking at the value of the potential along the $x$-axis:
 
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.36]{pitcfork_bif_c_1div2_a_1_d_1}
-    \caption{}
-    \label{fig:pitchfork_bif}
-\end{figure}
+
+
 
 \section{Results}
 \label{sec:results}
@@ -240,13 +225,13 @@ is the angular frequency of oscillation in the linear approximation. Therefore, 
 	A)\includegraphics[scale=0.35]{ld_xpx_t20_E-001.png}
 	B)\includegraphics[scale=0.35]{ld_xpx_t20_E001.png}	
 	\caption{Parameters $W_0 = 1/2$ and $k = 1$. Surface $y = 0$. $H_0 =-0.01, 0.01$.  }
-	\label{fig:ld_xxxx}
+	\label{fig:ld_x_px}
 \end{figure}
 
 \begin{figure}[htbp]
 	A)\includegraphics[scale=0.35]{ld_t60_line_x_E.png}
 	B)\includegraphics[scale=0.35]{ld_t60_line_y_E.png}
-	\caption{ Bifurcations.  Parameters $W_0 = 1/2$ and $k = 1$. Lagrangian descriptor $E$ vs $x_0$ and $E$ vs $y_0$ }
+	\caption{ Bifurcations diagrams based on Lagrangian descriptor $E$ vs $x_0$ and $E$ vs $y_0$.  Parameters $W_0 = 1/2$ and $k = 1$. }
 	\label{fig:ld_E_xy}
 \end{figure}
 
@@ -257,13 +242,84 @@ is the angular frequency of oscillation in the linear approximation. Therefore, 
 \end{figure}
 
 
+
+
+\begin{figure}[htbp]
+	A)\includegraphics[scale=0.35]{fate_map_ds_gamma1E_001.png}
+	B)\includegraphics[scale=0.35]{ld_action_ds_gamma1_E_001.png}
+	C)\includegraphics[scale=0.35]{fate_map_ds_gamma2E_001.png}
+	D)\includegraphics[scale=0.35]{ld_action_ds_gamma2_E_001.png}
+	E)\includegraphics[scale=0.35]{fate_map_ds_gamma3E_001.png}
+	F)\includegraphics[scale=0.35]{ld_action_ds_gamma3_E_001.png}
+	\caption{ Fate maps and Lagrangian descriptors evaluated on the dividing surface corresponding to periodic orbits $\Gamma_1$, $\Gamma_2$, and $\Gamma_3$ ($E$ =0.01). }
+	\label{fig:ld_fm_ds}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	A)\includegraphics[scale=0.35]{fate_map_ds_gamma1E_0019.png}
+	B)\includegraphics[scale=0.35]{ld_action_ds_gamma1_E_0019.png}
+	C)\includegraphics[scale=0.35]{fate_map_ds_gamma2E_0019.png}
+	D)\includegraphics[scale=0.35]{ld_action_ds_gamma2_E_0019.png}
+	E)\includegraphics[scale=0.35]{fate_map_ds_gamma3E_0019.png}
+	F)\includegraphics[scale=0.35]{ld_action_ds_gamma3_E_0019.png}
+	\caption{ Fate maps and Lagrangian descriptors evaluated on the dividing surface corresponding to periodic orbits $\Gamma_1$, $\Gamma_2$, and $\Gamma_3$ ($E$ =0.019, before bifurcation of $\Gamma_3$). }
+	\label{fig:ld_fm_ds}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	A)\includegraphics[scale=0.35]{fate_map_ds_gamma1E_0021.png}
+	B)\includegraphics[scale=0.35]{ld_action_ds_gamma1_E_0021.png}
+	C)\includegraphics[scale=0.35]{fate_map_ds_gamma2E_0021.png}
+	D)\includegraphics[scale=0.35]{ld_action_ds_gamma2_E_0021.png}
+	\caption{ Fate maps and Lagrangian descriptors evaluated on the dividing surface corresponding to periodic orbits $\Gamma_1$ and $\Gamma_2$ ($E$ =0.021, after bifurcation of $\Gamma_3$). }
+	\label{fig:ld_fm_ds}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	A)\includegraphics[scale=0.35]{fate_map_ds_gamma1E_0027.png}
+	B)\includegraphics[scale=0.35]{ld_action_ds_gamma1_E_0027.png}
+	C)\includegraphics[scale=0.35]{fate_map_ds_gamma2E_0027.png}
+	D)\includegraphics[scale=0.35]{ld_action_ds_gamma2_E_0027.png}
+	\caption{ Fate maps and Lagrangian descriptors evaluated on the dividing surface corresponding to periodic orbits $\Gamma_1$ and $\Gamma_2$ ($E$ =0.027, before bifurcation of $\Gamma_2$  ). }
+	\label{fig:ld_fm_ds}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	A)\includegraphics[scale=0.35]{fate_map_ds_gamma1E_003.png}
+	B)\includegraphics[scale=0.35]{ld_action_ds_gamma1_E_003.png}
+	\caption{ Fate maps and Lagrangian descriptors evaluated on the dividing surface corresponding to periodic orbits $\Gamma_1$ and $\Gamma_2$ ($E$ =0.03, after bifurcation of $\Gamma_2$  ). }
+	\label{fig:ld_fm_ds}
+\end{figure}
+
+
+
+\begin{figure}[htbp]
+	A)\includegraphics[scale=0.35]{fate_map_ds_gamma1E_0065.png}
+	B)\includegraphics[scale=0.35]{ld_action_ds_gamma1_E_0065.png}
+	\caption{ Fate maps and Lagrangian descriptors evaluated on the dividing surface corresponding to periodic orbit $\Gamma_1$ ($E$ =0.065, before bifurcation of $\Gamma_1$ ). }
+	\label{fig:ld_fm_ds}
+\end{figure}
+
+
 \begin{figure}
     \centering
     A)\includegraphics{traj_type2.png}
     B)\includegraphics{traj_escapping.png}
-    \caption{Example trajectories. A) $E = -0.1$, B) $E=0.01$, with identical initial condition $(x_0, y_0) = (0,0)$, and $p_{x,0} = 0.1$}
+    \caption{Example trajectories for bounding and dissociation energies, respectively. A) $E = -0.1$, B) $E=0.01$, with identical initial condition $(x_0, y_0) = (0, 0)$, and $p_{x,0} = 0.1$}
     \label{fig:my_label}
 \end{figure}
+
+\textbf{TO-DO's}
+\begin{itemize}
+    \item Add LD maps for $k$ values.
+    \item Draw trajectories for IC taken from regions in LD maps where LD is highest, and with $k = \sqrt{7}$
+    \item $k > \sqrt{7}$ case
+\end{itemize}
+
 
 \section{Conclusions}
 \label{sec:conclusion}
