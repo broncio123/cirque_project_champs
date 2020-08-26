@@ -58,7 +58,7 @@ def draw_lagrangian_descriptor(LD, LD_type, grid_parameters, tau, p_value, norm 
         LD = LD / np.nanmax(LD)  # Scale LD output
     
     # Plot LDs
-    fig, (ax0, ax1) = plt.subplots(1, 2, figsize=(7.5,3), dpi=130)
+    fig, (ax0, ax1) = plt.subplots(1, 2, figsize=(7.5,3), dpi=200)
     
     points_ax1 = np.linspace(ax1_min, ax1_max, N1)
     points_ax2 = np.linspace(ax2_min, ax2_max, N2)
@@ -113,6 +113,6 @@ def draw_lagrangian_descriptor(LD, LD_type, grid_parameters, tau, p_value, norm 
     fig.colorbar(con1, ax=ax1, ticks=ticks_gradient, format='%.2f')
     
     plt.show()
-    
+
 __author__ = 'Broncio Aguilar-Sanjuan, Victor-Jose Garcia-Garrido, Vladimir Krajnak'
 __status__ = 'Development'
