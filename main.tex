@@ -221,27 +221,67 @@ Therefore, the origin is an index-1 saddle equilibrium point when the condition 
 \end{figure}
 
 
+
+%%%%%%%%%%%%%%%
+\newpage
+
+\subsection{ $E>0$ Transport between potential wells and Roaming }
+
+
+In this section, we study the transport associated with the roaming phenomenon. This potential energy $V(x,y)$ has some common features with the other potential energies surfaces where the roaming has been observed. The potential energy has two wells and a region where it is almost flat and its value goes to zero \ref{fig:double_vdw_PES}. For energies $E$ > 0 the phase space of the system becomes unbounded and the trajectories can escape from the potential wells. The Lagrangian descriptor plots in figure \ref{fig:ld_x_px} show how the structure of the phase space change when the goes from negative to positive. A trajectory presents roaming phenomenon if the particle travels from one potential well to the other one visiting the region where the potential energy surface is almost flat. This behaviour is associated with a special kind of chemical reaction where a molecule divide in two parts, then one part of the molecule travel around the other one before both parts recombine again and form a new molecule. This kind of reaction is impossible to explain if the motion of the fragments of the molecule is not considered. The roaming reaction happens only for a special combination of momentum and position of the reactants. 
+
+Following a previous studies of roaming for the double Morse potential well \cite{Carpenter2017,Carpenter2018, GonzalezMontoya2020}, let us consider the trajectories that go from one potential well to the other potential well and the trajectories that go from one potential well to the asymptotic region. To carry out this study let us consider 3 regions in the configuration space: 2 circles with the same radius, whose centres are close to the minimum of each potential well, regions $A$ and $B$, and a circle containing the two potential wells whose border is in the asymptotic region $C$, where the particle is almost a free particle. In the next numerical example, the radii that define the regions $A$, $B$, and $C$ are 1.5 and 5.0 respectively.
+
+In the double Morse system, there are three families of unstable hyperbolic periodic orbits that control the roaming. To define the families of periodic orbits, let us consider their projection on the configuration space. The projection of the first family of periodic orbits encircle both potential wells, the projection of the second family of periodic orbits encircle both potential wells and crosses the origin, and the projection of the periodic orbits corresponding to the third family encircle one well. In the present system, the same kind of periodic orbits exist for energies close to the threshold energy $E>0$, see figures \ref{fig:periodic_orbits_roaming}. Using Lagrangian descriptors or other chaos indicator we can find the values of $E$ where these families of hyperbolic periodic orbits exist  \cite{Demian2017,Gonzalez2020}. The stable and unstable manifolds of the hyperbolic periodic orbits generate singularities on the Lagrangian descriptor plots.
+
+In order to find the values of $E$ where the hyperbolic periodic orbit bifurcate, we calculate the Lagrangian descriptor on a set of initial conditions that contains the periodic orbits as a function of the $E$. In this particular example, a member of each family of hyperbolic periodic orbits crosses the line $y_0=0$ with momentum $p_{x0}$ = 0, see figure \ref{fig:periodic_orbits_roaming}. The Lagrangian descriptor corresponding to this set of initial conditions is in the figure \ref{fig:ld_E_xy}. The maxima around the points  $(E,x_0)$ = $(2.144,0.019)$, $(1.920,0.029)$, and $(1.678,0.659)$ on this figure corresponds to the energies of the bifurcation and the point where the periodic orbits intersect the $x_0$ axis. 
+
+
 \begin{figure}[htbp]
 	A)\includegraphics[scale=0.35]{ld_xpx_t20_E-001.png}
 	B)\includegraphics[scale=0.35]{ld_xpx_t20_E001.png}	
-	\caption{Parameters $W_0 = 1/2$ and $k = 1$. Surface $y = 0$. $H_0 =-0.01, 0.01$.  }
+	\caption{Lagrangian descriptors plots based on the action $S_0$ for $E =-0.01$ and $0.01$. The initial momentum has $p_{y0}=0$ and the integration time $\tau=20$ ($W_0 = 1/2$ and $k = 1$). For energies $E > 0$ the phase space becomes unbounded and the trajectories can escape to infinity. On the figure B) the periodic orbit $\Gamma_1$ is created, their stable and unstable manifolds intersect the plane  around  $(x_0,p_{x0})=(2.6,0)$ }
 	\label{fig:ld_x_px}
 \end{figure}
 
-\begin{figure}[htbp]
-	A)\includegraphics[scale=0.35]{ld_t60_line_x_E.png}
-	B)\includegraphics[scale=0.35]{ld_t60_line_y_E.png}
-	\caption{ Bifurcations diagrams based on Lagrangian descriptor $E$ vs $x_0$ and $E$ vs $y_0$.  Parameters $W_0 = 1/2$ and $k = 1$. }
-	\label{fig:ld_E_xy}
-\end{figure}
 
 \begin{figure}[htbp]
 	\includegraphics[scale=0.5]{orbits_2D.png}
-	\caption{Periodic orbits in the configuration space. $E$ = 0.01. }
+	\caption{ Hyperbolic periodic orbits $\Gamma_1$, $\Gamma_2$, and $\Gamma_3$ associated with the roaming in the configuration space. $E$ = 0.01. }
+	\label{fig:periodic_orbits_roaming}
+\end{figure}
+
+
+
+
+\begin{figure}[htbp]
+	\includegraphics[scale=0.5]{ld_t60_line_x_E.png}
+	%B)\includegraphics[scale=0.35]{ld_t60_line_y_E.png}
+	\caption{Bifurcations diagrams based on Lagrangian descriptor $E$ vs $x_0$. The integration time $\tau=60$ ($W_0 = 1/2$ and $k = 1$.}
 	\label{fig:ld_E_xy}
 \end{figure}
 
-In this section we will study the transport associated with the roaming phenomenon. Let's consider the trajectories that go from one potential well to the other potential well and the trajectories that go from one potential well to the asymptotic. To carry out this study let's consider 3 regions in the configuration space: 2 circles with the same radius, whose centres are in the minimum of each potential well, regions A and B, and a circle containing the two potential wells where the trajectories are opposite in origin and whose border is in the asymptotic region, region C. In the next numerical example, the radios to define the regions A,B, and C are 1.5 and 5.0 respectively.
+
+In order to study the transport between the wells and the roaming, we consider the dividing surface associated with the periodic orbits $\Gamma_1$, $\Gamma_2$, and $\Gamma_3$. The dividing surface of one periodic orbit has 3 important properties:
+
+\begin{itemize}
+    \item The flux is minimal on the dividing surface
+    \item The periodic orbits associated with the dividing surface are  subsets of the dividing surface.
+    \item All the trajectories that cross the dividing surface crosses the projection of the periodic orbit.
+\end{itemize}
+
+The last property is important for our study of the transport between wells and roaming. We can visualise the regions with the same fate on the dividing surface.
+
+The algorithm to construct the dividing surface of a periodic orbit consist of 3 steps:
+
+\begin{itemize}
+    \item Project the periodic orbit on the configuration space
+    \item For each point $(x,y)$ on the configuration space construct the circle compatible with the conservation of the energy
+    \[ p^2_x + p^2_y =  2m(E - V(x,y)) \]
+    \item Take the union of all the circles for any point in the projection of the periodic orbit.
+\end{itemize}
+
+The next figures show the fate maps and the Lagrangian descriptor plots evaluated on the dividing surfaces for different values of the energy. We consider values of $E$ after and before the bifurcation of the periodic orbits. The boundaries of the regions with different fates correspond to singularities on the Lagrangian descriptor plots. The singularities are a characteristic signal of the presence of stable and unstable manifolds. The stable and unstable manifolds have 2 dimensions and direct the trajectories and divide the regions with different fates in the constant energy manifold.
 
 
 \begin{figure}[htbp]
@@ -251,9 +291,12 @@ In this section we will study the transport associated with the roaming phenomen
 	D)\includegraphics[scale=0.35]{ld_action_ds_gamma2_E_001.png}
 	E)\includegraphics[scale=0.35]{fate_map_ds_gamma3E_001.png}
 	F)\includegraphics[scale=0.35]{ld_action_ds_gamma3_E_001.png}
-	\caption{ Fate maps and Lagrangian descriptors evaluated on the dividing surface corresponding to periodic orbits $\Gamma_1$, $\Gamma_2$, and $\Gamma_3$ ($E$ =0.01). }
-	\label{fig:ld_fm_ds}
+	\caption{ Fate maps and Lagrangian descriptors evaluated on the dividing surface corresponding to periodic orbits $\Gamma_1$, $\Gamma_2$, and $\Gamma_3$ for an energy close to the dissociation threshold ($E$ =0.01). }
+	\label{fig:ld_fm_ds_E_001}
 \end{figure}
+
+
+
 
 
 \begin{figure}[htbp]
@@ -263,8 +306,8 @@ In this section we will study the transport associated with the roaming phenomen
 	D)\includegraphics[scale=0.35]{ld_action_ds_gamma2_E_0019.png}
 	E)\includegraphics[scale=0.35]{fate_map_ds_gamma3E_0019.png}
 	F)\includegraphics[scale=0.35]{ld_action_ds_gamma3_E_0019.png}
-	\caption{ Fate maps and Lagrangian descriptors evaluated on the dividing surface corresponding to periodic orbits $\Gamma_1$, $\Gamma_2$, and $\Gamma_3$ ($E$ =0.019, before bifurcation of $\Gamma_3$). }
-	\label{fig:ld_fm_ds}
+	\caption{ Fate maps and Lagrangian descriptors evaluated on the dividing surface corresponding to periodic orbits $\Gamma_1$, $\Gamma_2$, and $\Gamma_3$ for an energy before bifurcation of $\Gamma_3$ ($E$ =0.019). }
+	\label{fig:ld_fm_ds_E_0019}
 \end{figure}
 
 
@@ -273,8 +316,8 @@ In this section we will study the transport associated with the roaming phenomen
 	B)\includegraphics[scale=0.35]{ld_action_ds_gamma1_E_0021.png}
 	C)\includegraphics[scale=0.35]{fate_map_ds_gamma2E_0021.png}
 	D)\includegraphics[scale=0.35]{ld_action_ds_gamma2_E_0021.png}
-	\caption{ Fate maps and Lagrangian descriptors evaluated on the dividing surface corresponding to periodic orbits $\Gamma_1$ and $\Gamma_2$ ($E$ =0.021, after bifurcation of $\Gamma_3$). }
-	\label{fig:ld_fm_ds}
+	\caption{ Fate maps and Lagrangian descriptors evaluated on the dividing surface corresponding to periodic orbits $\Gamma_1$ and $\Gamma_2$ for an energy after bifurcation of $\Gamma_3$  ($E$ =0.021). }
+	\label{fig:ld_fm_ds_E_0021}
 \end{figure}
 
 
@@ -283,16 +326,16 @@ In this section we will study the transport associated with the roaming phenomen
 	B)\includegraphics[scale=0.35]{ld_action_ds_gamma1_E_0027.png}
 	C)\includegraphics[scale=0.35]{fate_map_ds_gamma2E_0027.png}
 	D)\includegraphics[scale=0.35]{ld_action_ds_gamma2_E_0027.png}
-	\caption{ Fate maps and Lagrangian descriptors evaluated on the dividing surface corresponding to periodic orbits $\Gamma_1$ and $\Gamma_2$ ($E$ =0.027, before bifurcation of $\Gamma_2$  ). }
-	\label{fig:ld_fm_ds}
+	\caption{ Fate maps and Lagrangian descriptors evaluated on the dividing surface corresponding to periodic orbits $\Gamma_1$ and $\Gamma_2$ for an energy before bifurcation of $\Gamma_2$    ($E$ =0.027). }
+	\label{fig:ld_fm_ds_E_0027}
 \end{figure}
 
 
 \begin{figure}[htbp]
 	A)\includegraphics[scale=0.35]{fate_map_ds_gamma1E_003.png}
 	B)\includegraphics[scale=0.35]{ld_action_ds_gamma1_E_003.png}
-	\caption{ Fate maps and Lagrangian descriptors evaluated on the dividing surface corresponding to periodic orbits $\Gamma_1$ and $\Gamma_2$ ($E$ =0.03, after bifurcation of $\Gamma_2$  ). }
-	\label{fig:ld_fm_ds}
+	\caption{ Fate maps and Lagrangian descriptors evaluated on the dividing surface corresponding to periodic orbits $\Gamma_1$ and $\Gamma_2$ for an energy after bifurcation of $\Gamma_2$  ($E$ =0.03 ). }
+	\label{fig:ld_fm_ds_E_003}
 \end{figure}
 
 
@@ -300,9 +343,22 @@ In this section we will study the transport associated with the roaming phenomen
 \begin{figure}[htbp]
 	A)\includegraphics[scale=0.35]{fate_map_ds_gamma1E_0065.png}
 	B)\includegraphics[scale=0.35]{ld_action_ds_gamma1_E_0065.png}
-	\caption{ Fate maps and Lagrangian descriptors evaluated on the dividing surface corresponding to periodic orbit $\Gamma_1$ ($E$ =0.065, before bifurcation of $\Gamma_1$ ). }
-	\label{fig:ld_fm_ds}
+	\caption{ Fate maps and Lagrangian descriptors evaluated on the dividing surface corresponding to periodic orbit $\Gamma_1$ for an energy before bifurcation of $\Gamma_1$ ($E$ =0.065 ). }
+	\label{fig:ld_fm_ds_E_0065}
 \end{figure}
+
+
+The figures show that the areas of the fate maps of the external periodic orbits do not change much after the bifurcation of the periodic orbits of the internal periodic orbits. For example let us consider the fate maps of the periodic orbits $\Gamma_1$ and $\Gamma_2$ after and before the bifurcation of the periodic orbit $\Gamma_3$, see figures \ref{fig:ld_fm_ds_E_0019} and \ref{fig:ld_fm_ds_E_0021}.  
+
+\newpage
+
+\subsection{other aspects}
+
+\subsection{Bifurcation of the PES}
+
+As shown in Figure \ref{fig:double_vdw_PES}C, the PES experiences a pitchfork bifurcation whenever $\eta = k/d  > \eta_c = \sqrt{7}$; where $k$ and $d$ are parameters in \eqref{eq:double_vdw}, and $\eta_c$ is the critical value of the bifurcation parameter. The system transitions from having three fixed points - an unstable saddle and two stable minima, to having a single stable minimum. This transition can be thought as the merging of the three original fixed points into one, as the height of the central barrier between the wells is lowered. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{figure}
@@ -421,6 +477,13 @@ In this section we will study the transport associated with the roaming phenomen
 
 \section{Conclusions}
 \label{sec:conclusion}
+
+
+
+The dynamics associated with the roaming is present in this system and is similar to the dynamics of the double Morse system. For energies close to the threshold $E=0$, the fate maps have a similar structure that the fate maps and Lagrangian descriptor plots evaluated on the dividing surfaces corresponding to the double Morse potential system. This result is related to the nature of the potential energies outside the regions $A$ and $B$. Both potential energies have the same qualitative geometry outside those regions. The trajectories only travel a finite time before to reach the boundaries that divide the regions $A$, $B$, and $C$.
+For this reason, the effects of the different geometrical features of both potentials are visible on the transport between the regions $A$, $B$, and $C$. The restricted dynamics are similar for both potentials energies.  
+  
+
 
 \section*{Acknowledgments}
 The authors would like to acknowledge the financial support provided by the EPSRC Grant No. EP/P021123/1 and the Office of Naval Research Grant No. N00014-01-1-0769.
