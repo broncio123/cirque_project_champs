@@ -369,7 +369,11 @@ As shown in Figure \ref{fig:double_vdw_PES}C, the PES experiences a pitchfork bi
     \label{fig:my_label}
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% PES PROFILES WITH K CRITICAL, SHOWING SAMPLED ENERGY LEVELS
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure}
     \centering
@@ -378,6 +382,11 @@ As shown in Figure \ref{fig:double_vdw_PES}C, the PES experiences a pitchfork bi
     \caption{PES profile A) $y=0$; B) $x=0$; for critical bifurcation values and comparison with energy levels $H_0$}
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% X-PX POINCARE MAPS ADDED BY VICTOR. K CRITICAL, VARIABLE ENERGY
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
 	A)\includegraphics[scale=0.3]{PS_cirque_H_-0_2_y_0_w0_1div2_d_1_k_sqrt7.png}
 	B)\includegraphics[scale=0.3]{PS_cirque_H_-0_1_y_0_w0_1div2_d_1_k_sqrt7.png}	
@@ -387,15 +396,38 @@ As shown in Figure \ref{fig:double_vdw_PES}C, the PES experiences a pitchfork bi
 	\label{fig:psec_y_0_bif}
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% X-PX TOTAL LD MAPS ADDED BY BRONCIO. K CRITICAL, VARIABLE ENERGY
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
     \centering
-    A) $H_0 = -0.2$ \includegraphics[width=0.6\textwidth]{notebooks/bifurcation/k_critical/LD_total_x-px_tau_500_k_kc_E_-0.4.png}\\
-    A) $H_0 = -0.1$ \includegraphics[width=0.6\textwidth]{notebooks/bifurcation/k_critical/LD_total_x-px_tau_500_k_kc_E_-0.2.png}\\
-    A) $H_0 = -0.05$ \includegraphics[width=0.6\textwidth]{notebooks/bifurcation/k_critical/LD_total_x-px_tau_500_k_kc_E_-0.1.png}\\
-    A) $H_0 = -0.01$ \includegraphics[width=0.6\textwidth]{LD_total}
+    A) $H_0 = -0.4$ \includegraphics[width=0.5\textwidth]{notebooks/bifurcation/k_critical/LD_total_x-px_tau_500_k_kc_E_-0.4.png}\\
+    B) $H_0 = -0.2$ \includegraphics[width=0.5\textwidth]{notebooks/bifurcation/k_critical/LD_total_x-px_tau_500_k_kc_E_-0.2.png}\\
+    C) $H_0 = -0.1$ \includegraphics[width=0.5\textwidth]{notebooks/bifurcation/k_critical/LD_total_x-px_tau_500_k_kc_E_-0.1.png}\\
+    D) $H_0 = -0.075$ \includegraphics[width=0.5\textwidth]{notebooks/bifurcation/k_critical/LD_total_x-px_tau_500_k_kc_E_-0.075.png}\\
+    E) $H_0 = -0.05$ \includegraphics[width=0.5\textwidth]{notebooks/bifurcation/k_critical/LD_total_x-px_tau_500_k_kc_E_-0.05.png}\\
+    F) $H_0 = -0.01$ \includegraphics[width=0.5\textwidth]{notebooks/bifurcation/k_critical/LD_total_x-px_tau_500_k_kc_E_-0.01.png}
     \caption{LD maps for $x-p_x$ slices with model parameters $W_0 = 1/2$, $d = 1$, and $k = \sqrt{7}$ - critical value, with energy values under dissociation, $H_0 < 0$}
 \end{figure}
 
+\newpage
+
+\begin{figure}
+    \centering
+    A) \includegraphics[width=0.75\textwidth]{notebooks/bifurcation/k_critical/LD_total_y-py_tau_500_k_kc_E_-0.2_PP.png}\\
+    B) \includegraphics[width=0.75\textwidth]{notebooks/bifurcation/k_critical/LD_total_y-py_tau_500_k_kc_E_-0.1_PP.png}\\
+    C) \includegraphics[width=0.75\textwidth]{notebooks/bifurcation/k_critical/LD_total_x-px_tau_500_k_kc_E_-0.075_PP.png}\\
+    D) \includegraphics[width=0.75\textwidth]{notebooks/bifurcation/k_critical/LD_total_y-py_tau_500_k_kc_E_-0.05_PP.png}
+    \caption{Bifurcation due to the energy of the system, $H_0$, at the critical value $k_c$ of the PES. LD maps for $x-p_x$ slices with model parameters $W_0 = 1/2$, $d = 1$, and $k = \sqrt{7}$ - critical value, with energy values under dissociation, $H_0 < 0$}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Y-PY POINCARE MAPS ADDED BY VICTOR. K CRITICAL, VARIABLE ENERGY
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure}[htbp]
 	A)\includegraphics[scale=0.3]{PS_cirque_H_-0_2_x_0_w0_1div2_d_1_k_sqrt7.png}
@@ -406,15 +438,39 @@ As shown in Figure \ref{fig:double_vdw_PES}C, the PES experiences a pitchfork bi
 	\label{fig:psec_x_0_bif}
 \end{figure}
 
+% OLD LD MAPS
+
+% \begin{figure}
+%     \centering
+%     A) $H_0 = -0.2$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_2_y-py_PES_bifurcation.png}\\
+%     B) $H_0 = -0.1$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_1_y-py_PES_bifurcation.png}\\
+%     C) $H_0 = -0.05$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_05_y-py_PES_bifurcation.png}\\
+%     D) $H_0 = -0.01$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_01_y-py_PES_bifurcation.png}
+%     \caption{LD maps for $y-p_y$ slices with model parameters $W_0 = 1/2$, $d = 1$, and $k = \sqrt{7}$ - critical value, with energy values under dissociation, $H_0 < 0$}
+% \end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Y-PY TOTAL LD MAPS ADDED BY BRONCIO. K CRITICAL, VARIABLE ENERGY
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{figure}
     \centering
-    A) $H_0 = -0.2$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_2_y-py_PES_bifurcation.png}\\
-    B) $H_0 = -0.1$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_1_y-py_PES_bifurcation.png}\\
-    C) $H_0 = -0.05$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_05_y-py_PES_bifurcation.png}\\
-    D) $H_0 = -0.01$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_01_y-py_PES_bifurcation.png}
-    \caption{LD maps for $y-p_y$ slices with model parameters $W_0 = 1/2$, $d = 1$, and $k = \sqrt{7}$ - critical value, with energy values under dissociation, $H_0 < 0$}
+    A) $H_0 = -0.4$ \includegraphics[width=0.5\textwidth]{notebooks/bifurcation/k_critical/LD_total_y-py_tau_500_k_kc_E_-0.4.png}\\
+    B) $H_0 = -0.2$ \includegraphics[width=0.5\textwidth]{notebooks/bifurcation/k_critical/LD_total_y-py_tau_500_k_kc_E_-0.2.png}\\
+    C) $H_0 = -0.1$ \includegraphics[width=0.5\textwidth]{notebooks/bifurcation/k_critical/LD_total_y-py_tau_500_k_kc_E_-0.1.png}\\
+    D) $H_0 = -0.075$ \includegraphics[width=0.5\textwidth]{notebooks/bifurcation/k_critical/LD_total_y-py_tau_500_k_kc_E_-0.075.png}\\
+    E) $H_0 = -0.05$ \includegraphics[width=0.5\textwidth]{notebooks/bifurcation/k_critical/LD_total_y-py_tau_500_k_kc_E_-0.05.png}\\
+    F) $H_0 = -0.01$ \includegraphics[width=0.5\textwidth]{notebooks/bifurcation/k_critical/LD_total_y-py_tau_500_k_kc_E_-0.01.png}
+    \caption{LD maps for $x-p_x$ slices with model parameters $W_0 = 1/2$, $d = 1$, and $k = \sqrt{7}$ - critical value, with energy values under dissociation, $H_0 < 0$}
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% PES PROFILES WITH K VARIABLE AROUND K-CRITICAL, FIXED ENERGY LEVEL
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
     \centering
     \includegraphics{pes_profile_around_bifurcation.png}
@@ -422,24 +478,24 @@ As shown in Figure \ref{fig:double_vdw_PES}C, the PES experiences a pitchfork bi
 \end{figure}
 
 
-\begin{figure}
-    \centering
-    A) $k = \sqrt{7} -3 \delta$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_2_x-px_PES_bifurcation_n_-3.png}\\
-    B) $k = \sqrt{7} -2 \delta$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_2_x-px_PES_bifurcation_n_-2.png}\\
-    C) $k = \sqrt{7} - \delta$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_2_x-px_PES_bifurcation_n_-1.png}\\
-    D) $k = \sqrt{7}$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_2_x-px_PES_bifurcation_n_0.png}
-    \caption{LD maps for $x-p_x$ slices with model parameters $W_0 = 1/2$, $d = 1$, and $k = \sqrt{7} + n \delta$ with $\delta = 0.1$, below ($n < 0$) the critical bifurcation value ($n = 0$). The energy of the system is $H_0 = -0.2$}
-\end{figure}
+% \begin{figure}
+%     \centering
+%     A) $k = \sqrt{7} -3 \delta$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_2_x-px_PES_bifurcation_n_-3.png}\\
+%     B) $k = \sqrt{7} -2 \delta$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_2_x-px_PES_bifurcation_n_-2.png}\\
+%     C) $k = \sqrt{7} - \delta$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_2_x-px_PES_bifurcation_n_-1.png}\\
+%     D) $k = \sqrt{7}$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_2_x-px_PES_bifurcation_n_0.png}
+%     \caption{LD maps for $x-p_x$ slices with model parameters $W_0 = 1/2$, $d = 1$, and $k = \sqrt{7} + n \delta$ with $\delta = 0.1$, below ($n < 0$) the critical bifurcation value ($n = 0$). The energy of the system is $H_0 = -0.2$}
+% \end{figure}
 
 
-\begin{figure}
-    \centering
-    A) $k = \sqrt{7}$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_2_x-px_PES_bifurcation_n_0.png}\\
-    B) $k = \sqrt{7} + \delta$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_2_x-px_PES_bifurcation_n_1.png}\\
-    C) $k = \sqrt{7} + 2 \delta$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_2_x-px_PES_bifurcation_n_2.png}\\
-    D) $k = \sqrt{7} + 3 \delta$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_2_x-px_PES_bifurcation_n_3.png}\\
-    \caption{LD maps for $x-p_x$ slices with model parameters $W_0 = 1/2$, $d = 1$, and $k = \sqrt{7} + n \delta$ with $\delta = 0.1$, above ($n > 0$) the critical bifurcation value ($n = 0$). The energy of the system is $H_0 = -0.2$}
-\end{figure}
+% \begin{figure}
+%     \centering
+%     A) $k = \sqrt{7}$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_2_x-px_PES_bifurcation_n_0.png}\\
+%     B) $k = \sqrt{7} + \delta$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_2_x-px_PES_bifurcation_n_1.png}\\
+%     C) $k = \sqrt{7} + 2 \delta$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_2_x-px_PES_bifurcation_n_2.png}\\
+%     D) $k = \sqrt{7} + 3 \delta$ \includegraphics[width=0.6\textwidth]{LD_H0_-0_2_x-px_PES_bifurcation_n_3.png}\\
+%     \caption{LD maps for $x-p_x$ slices with model parameters $W_0 = 1/2$, $d = 1$, and $k = \sqrt{7} + n \delta$ with $\delta = 0.1$, above ($n > 0$) the critical bifurcation value ($n = 0$). The energy of the system is $H_0 = -0.2$}
+% \end{figure}
 
 \begin{figure}[htbp]
 	A)\includegraphics[scale=0.3]{PS_y_0_H_-0_2_w0_1div2_k_sqrt7_min_5delta_d_1.png}
